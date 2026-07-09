@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:practica1/dependency_injection.dart';
-import 'package:practica1/src/presentation/home/home_page.dart';
 
 void main() {
-  setUpLocator();
-  runApp(const OnePiece());
+  runApp(const MyApp());
 }
 
-class OnePiece extends StatelessWidget {
-  const OnePiece({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'One Piece App',
+      title: 'Práctica',
       darkTheme: ThemeData.dark(),
-      home: HomePage(),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Práctica'), centerTitle: true),
+        body: const Center(child: Text('¡Listo para practicar!')),
+      ),
     );
   }
 }
