@@ -35,10 +35,6 @@ echo "🛠  Creando esqueleto en lib/src (feature: ${FEATURE})"
 for capa in "${CAPAS[@]}"; do
   dir="lib/src/${capa}"
   mkdir -p "$dir"
-  # .gitkeep para que git conserve las carpetas vacías
-  if [ -z "$(ls -A "$dir" 2>/dev/null)" ]; then
-    touch "$dir/.gitkeep"
-  fi
   echo "   ✔ $dir"
 done
 
