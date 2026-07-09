@@ -39,10 +39,10 @@ cargan solas).
 | `eliminar-proyecto` | Reinicia el proyecto (ver abajo). Pide confirmación. |
 | `eliminar-proyecto -y` | Reinicia sin preguntar. |
 
-> **Nota sobre `revisar-*` en terminal:** requiere un Flutter cuyo Dart cumpla el
-> `sdk` del `pubspec.yaml`. Si el Flutter de la terminal es más viejo, `flutter
-> analyze` fallará con *"version solving failed"*. Para revisar sin depender del
-> SDK, usa los slash commands de Claude Code (abajo).
+> **Nota sobre versiones:** el `pubspec.yaml` está alineado a Flutter **3.22.2**
+> (Dart 3.4.3), así que `flutter pub get` y `flutter analyze` funcionan con ese
+> SDK. Si actualizas Flutter, quizá quieras subir `flutter_bloc`, `get_it` y
+> `flutter_lints` a sus últimas versiones.
 
 ### `eliminar-proyecto` — qué borra y qué conserva
 
