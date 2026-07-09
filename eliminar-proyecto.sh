@@ -31,6 +31,8 @@ if [[ "${1:-}" != "-y" && "${1:-}" != "--yes" ]]; then
 fi
 
 # --- Limpiar las capas ------------------------------------------------------
+# Solo se toca lib/. Todo lo que está en la raíz (README.md, los scripts *.sh,
+# la carpeta .claude/, pubspec.yaml, android/, ios/, ...) se conserva SIEMPRE.
 # Elimina todo lo que hay en lib/ salvo main.dart
 find lib -mindepth 1 -not -name 'main.dart' -not -path 'lib' -delete 2>/dev/null || {
   # Fallback por si 'find -delete' no puede con directorios no vacíos en un paso
